@@ -1,0 +1,11 @@
+{{#each model as |person index|}}
+<li>
+    Person {{person.id}} {{index}}
+    {{person.name}}
+    {{#link-to 'persons.show' person }}
+    Link {{index}}
+    {{/link-to}}
+</li>
+{{/each}}
+
+{{outlet}}
